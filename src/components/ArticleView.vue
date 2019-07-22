@@ -39,7 +39,7 @@ export default{
 
   },
   created () {
-    this.$http.get('http://localhost:9090/articles/' + this.$route.params.name).then(function (data) {
+    this.$http.get('http://localhost:8080/articles/' + this.$route.params.name).then(function (data) {
       var articleJSON = data.body
       this.articleTitle = articleJSON['title']
       this.articleContent = articleJSON['content']

@@ -74,7 +74,7 @@ export default{
         // Error to the form
         this.formErrors.push('Please enter content for the article.')
       } else {
-        this.$http.put('http://localhost:9090/articles/' + this.articleTitle, this.articleContent).then(response => {
+        this.$http.put('http://localhost:8080/articles/' + this.articleTitle, this.articleContent).then(response => {
           // PUT request success
           this.$router.push('/' + this.articleTitle)
           // eslint-disable-next-line
@@ -86,7 +86,7 @@ export default{
     }
   },
   created () {
-    this.$http.get('http://localhost:9090/articles/' + this.$route.params.name).then(function (data) {
+    this.$http.get('http://localhost:8080/articles/' + this.$route.params.name).then(function (data) {
       var articleJson = data.body
       this.articleTitle = articleJson['title']
       this.articleContent = articleJson['content']

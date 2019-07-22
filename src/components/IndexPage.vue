@@ -33,7 +33,7 @@ export default{
 
   },
   created () {
-    this.$http.get('http://localhost:9090/articles').then(function (data) {
+    this.$http.get('http://localhost:8080/articles').then(function (data) {
       this.articleTitles = data.body.titles
       this.pageInit = true
     })
