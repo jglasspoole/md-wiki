@@ -1,8 +1,8 @@
 # Simple Markdown Wiki Application
 
-A Golang based REST API with a Vue JS front-end to view and edit articles with markdown format. 
+A Golang based REST API with a Vue JS front-end to view and edit articles with markdown formatting. 
 
-The solution should Dockerized into one container.
+The solution should be Dockerized into one container.
 
 ## Installation
 
@@ -35,13 +35,17 @@ Once the Docker container is running, you may access the application at 127.0.0.
 URLs served are:
 
 /: Articles Home Page
+
 /(article name): Article View Page (if exists)
+
 /edit/(article name): Create/Update Article Page
 
-Access to the REST API is also available on the server at:
+Access to the REST API is also available on the server at:  
 
 /articles/: JSON array of all article names
+
 /articles/(article name): JSON object of individual article (if exists)
 
-The article view and preview features provide [Markdown](https://www.markdownguide.org/basic-syntax/) compliant display. 
+The article view and preview features provide [Markdown](https://www.markdownguide.org/basic-syntax/) compliant display.
+ 
 Markdown text compatible with a ".md" file will be rendered accordingly.
